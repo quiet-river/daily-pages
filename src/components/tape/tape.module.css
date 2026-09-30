@@ -1,0 +1,40 @@
+/* Ported from research/lemon-tea-foundations.html: tape-strip / tape-layer. */
+.root {
+  display: inline-block;
+  position: relative;
+  width: var(--dp-tape-width, 180px);
+  height: var(--dp-tape-height, 30px);
+  flex: none;
+  vertical-align: middle;
+  transform: rotate(var(--dp-tape-rotation, -5deg));
+  filter: drop-shadow(var(--dp-tape-shadow, 0 3px 3px #94745a20));
+}
+.surface {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--dp-tape-color, #f1d36f);
+  opacity: var(--dp-tape-opacity, .85);
+}
+.root[data-tone='rose'] .surface { background-color: var(--dp-tape-color, #efc4bc); }
+.root[data-tone='mint'] .surface { background-color: var(--dp-tape-color, #b8d6bd); }
+.root[data-tone='lilac'] .surface { background-color: var(--dp-tape-color, #e7e1f0); }
+.root[data-variant='stripe'] { transform: rotate(var(--dp-tape-rotation, 3deg)); }
+.root[data-variant='stripe'] .surface {
+  background-image: repeating-linear-gradient(135deg, transparent 0 9px, var(--dp-tape-pattern-color, #ffffff55) 9px 18px);
+}
+.root[data-variant='dot'] { transform: rotate(var(--dp-tape-rotation, -2deg)); }
+.root[data-variant='dot'] .surface {
+  background-color: var(--dp-tape-color, #edf4e9);
+  background-image: radial-gradient(var(--dp-tape-pattern-color, #b8d6bd) 1.5px, transparent 1.7px);
+  background-size: var(--dp-tape-pattern-size, 10px) var(--dp-tape-pattern-size, 10px);
+}
+.root[data-variant='dot'][data-tone='rose'] .surface { background-image: radial-gradient(var(--dp-tape-pattern-color, #efc4bc) 1.5px, transparent 1.7px); }
+.root[data-variant='dot'][data-tone='lemon'] .surface { background-image: radial-gradient(var(--dp-tape-pattern-color, #f1d36f) 1.5px, transparent 1.7px); }
+.root[data-variant='dot'][data-tone='lilac'] .surface { background-image: radial-gradient(var(--dp-tape-pattern-color, #b2a3c4) 1.5px, transparent 1.7px); }
+.root[data-variant='torn'] { transform: rotate(var(--dp-tape-rotation, 4deg)); }
+.root[data-variant='torn'][data-tone='lemon'] .surface { background-color: var(--dp-tape-color, #f4dfae); }
+.root[data-edge='torn'] .surface {
+  clip-path: polygon(0 7%,5% 0,12% 8%,18% 1%,25% 10%,31% 2%,39% 9%,46% 0,54% 8%,61% 2%,69% 10%,77% 1%,85% 9%,93% 0,100% 8%,98% 93%,91% 100%,82% 92%,73% 100%,63% 93%,54% 100%,45% 92%,36% 100%,27% 93%,18% 100%,8% 92%,0 100%);
+}
+.customPreview { --dp-tape-width: 220px; --dp-tape-height: 36px; }

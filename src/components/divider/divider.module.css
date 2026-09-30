@@ -1,0 +1,27 @@
+/* Warm paper line assets, ported from research/lemon-tea-foundations.html. */
+.root { --dp-divider-ink:#bda392; --dp-divider-soft:#d2a696; --dp-divider-mint:#91ad94; --dp-divider-paper:#fffaf1; --dp-divider-length:78%; display:block; position:relative; width:var(--dp-divider-length); max-width:100%; color:#947d6d; transform:rotate(var(--dp-divider-rotation,0deg)); }
+.root[data-orientation='vertical'] { width:auto; height:var(--dp-divider-length); min-height:80px; }
+.line { position:relative; display:block; width:100%; min-height:2px; border-top:2px solid var(--dp-divider-ink); }
+.root[data-orientation='vertical'] .line { width:0; height:100%; min-height:0; border-top:0; border-left:2px solid var(--dp-divider-ink); }
+.root[data-variant='basic'] .line:after { content:''; position:absolute; inset:-5px 0 auto; height:10px; background:radial-gradient(circle at 9px 5px,#ffffff80 1px,transparent 1.2px); background-size:18px 10px; opacity:.3; pointer-events:none; }
+.root[data-variant='basic'] .label { position:absolute; top:6px; left:50%; padding:2px 8px; background:var(--dp-divider-paper); font-size:10px; transform:translateX(-50%) rotate(-2deg); }
+.root[data-variant='basic'] .line { border-color:var(--dp-divider-ink); }
+.root[data-variant='wave'] .svg, .root[data-variant='path'] .svg { display:block; width:235px; max-width:100%; height:90px; overflow:visible; }
+.svg path { fill:none; stroke:#b88a70; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+.svg circle { fill:var(--dp-divider-paper); stroke:#b88a70; stroke-width:3; }
+.root[data-variant='path'] .svg { filter:drop-shadow(0 2px 0 #d8b9a622); }
+.root[data-variant='stitch'] .line { border-top:3px dashed #d4a98d; transform:rotate(-1deg); }
+.root[data-variant='stitch'] .line:before,.root[data-variant='stitch'] .line:after { position:absolute; top:-9px; width:12px; height:12px; border:2px solid #d4a98d; border-radius:50%; background:var(--dp-divider-paper); content:''; }
+.root[data-variant='stitch'] .line:before { left:-3px; }.root[data-variant='stitch'] .line:after { right:-3px; }
+.annotation { position:relative; width:190px; min-height:76px; padding:13px 12px 8px 26px; border-left:3px solid #b6cdb5; border-bottom:3px solid #b6cdb5; color:#866957; font-size:12px; transform:rotate(2deg); }
+.annotation:before { position:absolute; left:-6px; top:-4px; width:9px; height:9px; border-radius:50%; background:#efc4bc; content:''; }
+.annotation .label { line-height:1.6; }
+.points { display:grid; gap:8px; width:210px; }
+.point { position:relative; display:grid; grid-template-columns:18px 1fr; gap:9px; align-items:center; color:#947d6d; font-size:10px; min-height:18px; }
+.point i { display:block; width:10px; height:10px; border:2px solid #bd8f78; border-radius:50%; background:var(--dp-divider-paper); }
+.point[data-active='true'] i,.point:nth-child(2) i { background:#f1d36f; }
+.point[data-tone='rose'] i { background:#efc4bc; }.point[data-tone='mint'] i { background:#b8d6bd; }.point[data-tone='lilac'] i { background:#e7e1f0; }
+.point + .point:before { position:absolute; left:4px; top:-10px; height:10px; border-left:2px dashed #c9ad9a; content:''; }
+.points > .label { margin-top:4px; color:#866957; font-size:11px; }
+.root[data-orientation='vertical'] .points { width:auto; height:100%; grid-auto-flow:row; }
+.root[data-orientation='vertical'] .svg { width:90px; height:235px; transform:rotate(90deg); transform-origin:center; }

@@ -1,0 +1,83 @@
+{
+  "name": "@daily-pages/ui",
+  "version": "0.1.0",
+  "description": "Composable UI assets for everyday life-recording pages.",
+  "type": "module",
+  "packageManager": "pnpm@11.4.0",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./calendar": {
+      "types": "./dist/calendar.d.ts",
+      "import": "./dist/calendar.js"
+    },
+    "./style.css": "./dist/Calendar.css",
+    "./calendar/style.css": "./dist/Calendar.css",
+    "./package.json": "./package.json",
+    "./title-frame": {
+      "types": "./dist/title-frame.d.ts",
+      "import": "./dist/title-frame.js"
+    },
+    "./title-frame/style.css": "./dist/TitleFrame.css",
+    "./tape": {
+      "types": "./dist/tape.d.ts",
+      "import": "./dist/tape.js"
+    },
+    "./tape/style.css": "./dist/Tape.css",
+    "./photo-frame": {
+      "types": "./dist/photo-frame.d.ts",
+      "import": "./dist/photo-frame.js"
+    },
+    "./photo-frame/style.css": "./dist/FilmStrip.css",
+    "./stamp": {
+      "types": "./dist/stamp.d.ts",
+      "import": "./dist/stamp.js"
+    },
+    "./stamp/style.css": "./dist/Stamp.css",
+    "./divider": {
+      "types": "./dist/divider.d.ts",
+      "import": "./dist/divider.js"
+    },
+    "./divider/style.css": "./dist/Divider.css"
+  },
+  "peerDependencies": {
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check-types": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.6.18",
+    "@storybook/react": "^8.6.18",
+    "@storybook/react-vite": "^8.6.18",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.4.1",
+    "jsdom": "^26.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "storybook": "^8.6.18",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.2",
+    "vite-plugin-dts": "^4.5.3",
+    "vitest": "^3.0.8"
+  }
+}
