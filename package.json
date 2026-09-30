@@ -4,11 +4,6 @@
   "description": "Composable UI assets for everyday life-recording pages.",
   "type": "module",
   "packageManager": "pnpm@11.4.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  },
   "sideEffects": [
     "**/*.css"
   ],
