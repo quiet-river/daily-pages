@@ -35,6 +35,6 @@ import '@daily-pages/ui/calendar/style.css'
 
 成功信号：四种标题框与原稿形态一致；胶带能以透叠与撕边固定图片；胶片保留两侧密集孔洞；每个组件有独立入口、样式入口、类型、逻辑、测试和 Storybook。用户可以替换内容与局部样式。
 
-视觉方向沿用早期手帐研究稿：奶油纸色、暖棕线条、粉黄绿色块、轻微旋转、撕边和实体拼贴结构。详细架构见 [`docs/architecture.md`](docs/architecture.md)。字体不绑定；页面排版由使用者决定。
+视觉方向沿用早期手帐研究稿：奶油纸色、暖棕线条、粉黄绿色块、轻微旋转、撕边和实体拼贴结构。详细架构见 [Daily Pages architecture](https://github.com/quiet-river/daily-pages/blob/main/docs/architecture.md)。字体不绑定；页面排版由使用者决定。
 
 未决问题：最终视觉需用户验收；包名尚未检查 npm 可用性；当前不发布到 npm。
